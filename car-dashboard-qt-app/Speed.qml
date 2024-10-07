@@ -166,7 +166,7 @@ Item {
             id: left_arm
             width: id_temper_left.width * 0.05
             height: id_temper_left.width * 0.5
-            anchors.topMargin: -50 // ?
+            anchors.topMargin: -50
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.horizontalCenterOffset: -40
             color: "light green"
@@ -176,6 +176,95 @@ Item {
             // Rotate 25 degrees to the right
             rotation: 25
             transformOrigin: Item.Center  // Rotate around the center of the rectangle
+
+            Rectangle {
+                id: cui_cho_trai
+                width: left_arm.width * 3
+                height: width
+                color: "light green"
+                radius: width
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.top: parent.bottom
+                anchors.topMargin: -10
+
+                Rectangle {
+                    id: arm_down_left
+                    width: parent.width * 0.25
+                    height: parent.height * 2
+                    color: "light green"
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    anchors.top: parent.bottom
+                    anchors.topMargin: -5
+                    rotation: 30
+                    transformOrigin: Item.Top | Item.HorizontalCenter
+
+                    Rectangle {
+                        id: ban_tay_left
+                        width: parent.width * 4
+                        height: width
+                        color: "light green"
+                        radius: width
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        anchors.top: parent.bottom
+                        anchors.topMargin: -5
+
+                        Rectangle {
+                            id: hilt
+                            width: parent.width * 2.5
+                            height: parent.width * 0.25
+                            anchors.top: parent.bottom
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            anchors.topMargin: -15
+                            anchors.horizontalCenterOffset: 9
+                            color: "light green"
+
+                            Rectangle {
+                                id: thanh_bao_ve
+                                width: 10
+                                height: 50
+                                anchors.right: parent.left  // Attach the right side of this rectangle to the left of the parent
+                                anchors.verticalCenter: parent.verticalCenter  // Align vertically to the parent's center
+                                color: "light green"
+
+                                Rectangle {
+                                    id: guom
+                                    width: 80
+                                    height: 40
+                                    anchors.right: parent.left  // Attach the right side of this rectangle to the left of the parent
+                                    anchors.verticalCenter: parent.verticalCenter  // Align vertically to the parent's center
+                                    color: "light green"
+
+                                    Canvas {
+                                        id: arrow
+                                        width: parent.height
+                                        height: parent.height
+                                        anchors.right: parent.left  // Attach the right side of this rectangle to the left of the parent
+                                        anchors.verticalCenter: parent.verticalCenter // Fill the entire guom rectangle
+
+                                        onPaint: {
+                                            var ctx = getContext("2d");
+                                            ctx.clearRect(0, 0, width, height); // Clear the canvas
+
+                                            // Set triangle color
+                                            ctx.fillStyle = "light green";
+
+                                            // Start drawing a triangle with the top vertex on the left
+                                            ctx.beginPath();
+                                            ctx.moveTo(0, height / 2);        // Left-center vertex (the top of the triangle rotated left)
+                                            ctx.lineTo(width, 0);             // Top-right vertex
+                                            ctx.lineTo(width, height);        // Bottom-right vertex
+                                            ctx.closePath();
+
+                                            // Fill the triangle
+                                            ctx.fill();
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
 
         }
     }
@@ -235,6 +324,41 @@ Item {
             //Rotate 25 degrees to the right
             rotation: -25
             transformOrigin: Item.Center  // Rotate around the center of the rectangle
+
+            Rectangle {
+                id: cui_cho_phai
+                width: left_arm.width * 3
+                height: width
+                color: "light green"
+                radius: width
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.top: parent.bottom
+                anchors.topMargin: -10
+
+                Rectangle {
+                    id: arm_down_right
+                    width: parent.width * 0.25
+                    height: parent.height * 2
+                    color: "light green"
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    anchors.top: parent.bottom
+                    anchors.topMargin: -5
+
+                    rotation: -30
+                    transformOrigin: Item.Top | Item.HorizontalCenter
+
+                    Rectangle {
+                        id: ban_tay_right
+                        width: parent.width * 4
+                        height: width
+                        color: "light green"
+                        radius: width
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        anchors.top: parent.bottom
+                        anchors.topMargin: -5
+                    }
+                }
+            }
 
         }
     }
