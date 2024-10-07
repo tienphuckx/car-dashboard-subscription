@@ -1,0 +1,13 @@
+module car-subscription
+typeinfo appcar-subscription.qmltypes
+prefer :/qt/qml/car-subscription/
+Main 1.0 Main.qml
+Dashboard 1.0 Dashboard.qml
+Fuel 1.0 Fuel.qml
+FuelNeedle 1.0 FuelNeedle.qml
+Gear 1.0 Gear.qml
+Info 1.0 Info.qml
+Speed 1.0 Speed.qml
+SpeedNeedle 1.0 SpeedNeedle.qml
+Turn 1.0 Turn.qml
+
