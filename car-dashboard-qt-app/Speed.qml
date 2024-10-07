@@ -103,7 +103,7 @@ Item {
             top: id_speed.verticalCenter
             topMargin: id_speed.height * 0.1
         }
-        text: "KM/H"
+        text: "Km/h"
         color: "light green"
         font.pixelSize: id_speed.height * 0.1
         font.family: font_for_km.name
@@ -121,7 +121,7 @@ Item {
         angleLength: id_speed.angleLength / (id_speed.maxSpeed / (id_speed.numberIndexs - 1))
     }
 
-    // // Left Rectangle --> Display temperature
+    //Display temperature
     Rectangle {
         id: id_temper_left
         anchors.top: parent.bottom
@@ -159,6 +159,24 @@ Item {
             anchors.top: parent.verticalCenter  // Positioned below the number
             anchors.topMargin: 28  // Adjust margin to place it under the number
             color: "black"
+        }
+
+        //cang tay trai
+        Rectangle {
+            id: left_arm
+            width: id_temper_left.width * 0.05
+            height: id_temper_left.width * 0.5
+            anchors.topMargin: -50 // ?
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.horizontalCenterOffset: -40
+            color: "light green"
+            anchors.top: id_temper_left.bottom
+            z: -2
+
+            // Rotate 25 degrees to the right
+            rotation: 25
+            transformOrigin: Item.Center  // Rotate around the center of the rectangle
+
         }
     }
 
@@ -201,6 +219,24 @@ Item {
             anchors.topMargin: 28  // Adjust margin to place it under the number
             color: "black"
         }
+
+        //cang tay phai
+        Rectangle {
+            id: right_arm
+            width: id_temper_right.width * 0.05
+            height: id_temper_right.width * 0.5
+            anchors.topMargin: -50
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.horizontalCenterOffset: 40
+            color: "light green"
+            anchors.top: id_temper_right.bottom
+            z: -2
+
+            //Rotate 25 degrees to the right
+            rotation: -25
+            transformOrigin: Item.Center  // Rotate around the center of the rectangle
+
+        }
     }
 
 
@@ -241,7 +277,125 @@ Item {
         }
 
 
-        // BTN switch to statistics pages
+        // Dui left
+        Rectangle {
+            id: bottom_left
+            anchors.top: id_speed_bot.bottom
+            width: id_speed_bot.width * 0.3
+            height: width
+            anchors.right: id_speed_bot.horizontalCenter  // Align to the left of center
+            anchors.rightMargin: id_speed_bot.width * 0.2
+            anchors.topMargin: -65
+            z: -3
+            radius: width/2
+            border.width: 2
+            border.color: "light green"
+            color: "black"
+
+            Rectangle {
+                id: id_foot_left
+                anchors.top: parent.bottom
+                width: bottom_left.width * 0.2
+                height: bottom_left.height * 0.7
+                border.color: "light green"
+                color: "light green"
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.horizontalCenterOffset: -15  // Move the rectangle 10 units to the left
+                anchors.topMargin: -10
+                z: -4
+
+                Canvas {
+                    id: id_final_feet_left
+                    width: parent.width * 3
+                    height: parent.height * 0.3  // Use only 30% of the parent's height at the bottom
+                    anchors.bottom: parent.bottom  // Anchor to the bottom of the parent
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    anchors.horizontalCenterOffset: -parent.width
+                    z: -5
+
+                    onPaint: {
+                        var ctx = getContext("2d");
+                        ctx.clearRect(0, 0, width, height); // Clear the canvas
+
+                        // Set triangle color
+                        ctx.fillStyle = "light green";
+
+                        // Start drawing the right triangle pointing to the left
+                        ctx.beginPath();
+                        ctx.moveTo(width, height);      // Bottom-right corner
+                        ctx.lineTo(0, height);          // Bottom-left corner
+                        ctx.lineTo(width, 0);           // Top-right corner (apex pointing left)
+                        ctx.closePath();
+
+                        // Fill the triangle
+                        ctx.fill();
+                    }
+                }
+
+            }
+
+        }
+
+        // Dui right
+        Rectangle {
+            id: bottom_right
+            anchors.top: id_speed_bot.bottom
+            width: id_speed_bot.width * 0.3
+            height: width
+            anchors.left: id_speed_bot.horizontalCenter  // Align to the right of center
+            anchors.leftMargin: id_speed_bot.width * 0.2 // add leftMargin to move to right
+            anchors.topMargin: -65
+            z: -3
+            radius: width/2
+            border.width: 2
+            border.color: "light green"
+            color: "black"
+
+            Rectangle {
+                id: id_foot_right
+                anchors.top: parent.bottom
+                width: bottom_left.width * 0.2
+                height: bottom_left.height * 0.7
+                border.color: "light green"
+                color: "light green"
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.horizontalCenterOffset: 15  // Move the rectangle 10 units to the left
+                anchors.topMargin: -10
+                z: -4
+
+                //final foot
+                Canvas {
+                    id: id_final_feet_right
+                    width: parent.width * 3
+                    height: parent.height * 0.3  // Use only 30% of the parent's height at the bottom
+                    anchors.bottom: parent.bottom  // Anchor to the bottom of the parent
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    anchors.horizontalCenterOffset: parent.width
+                    z: -5
+
+                    onPaint: {
+                        var ctx = getContext("2d");
+                        ctx.clearRect(0, 0, width, height); // Clear the canvas
+
+                        // Set triangle color
+                        ctx.fillStyle = "light green";
+
+                        // Start drawing the right triangle at the bottom of the canvas
+                        ctx.beginPath();
+                        ctx.moveTo(0, height);           // Bottom-left corner
+                        ctx.lineTo(width, height);       // Bottom-right corner
+                        ctx.lineTo(0, 0);                // Top-left corner of the triangle
+                        ctx.closePath();
+
+                        // Fill the triangle
+                        ctx.fill();
+                    }
+                }
+            }
+        }
+
+
+
     }
 
 }

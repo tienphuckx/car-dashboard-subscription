@@ -33,16 +33,18 @@ Item {
                 Rectangle {
                     height: id_gear.height * 0.12 + index * id_gear.height * 0.01
                     width: height
-                    color: index == value ? "light green" : "grey"
+                    color: index == value ? "white" : "black"
                     radius: width/2
                     antialiasing: true
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.top: parent.top
                     anchors.topMargin: id_gear.height * 0.05
+                    border.width: 2
+                    border.color: "white"
 
                     Text {
                         anchors.centerIn: parent
-                        color: "black"
+                        color: index == value ? "black" : "white"
                         text: index
                         font.pixelSize: parent.height * 0.5
                         font.family: font_gear_number.name
