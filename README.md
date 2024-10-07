@@ -1,6 +1,9 @@
 # car-dashboard-subscription
 A realtime car's dashboard using ESP32, DHT11 (UART), Qt, QML, Firebase, ...
 
+# Bee
+<img src="https://github.com/tienphuckx/car-dashboard-subscription/blob/master/imgs/final.PNG" />
+
 # Overview
 <img src="https://github.com/tienphuckx/car-dashboard-subscription/blob/master/imgs/car-dashboard.jpg" />
 
