@@ -100,7 +100,7 @@ Item {
                 color: "light green"
                 anchors.bottom: parent.top
                 anchors.horizontalCenter: parent.horizontalCenter
-                anchors.horizontalCenterOffset: 2
+                anchors.topMargin: 5
             }
         }
 
@@ -125,7 +125,7 @@ Item {
                 color: "light green"
                 anchors.bottom: parent.top
                 anchors.horizontalCenter: parent.horizontalCenter
-                anchors.horizontalCenterOffset: 2
+                anchors.topMargin: 5
             }
         }
     }
@@ -309,6 +309,17 @@ Item {
                                             ctx.fill();
                                         }
                                     }
+
+                                    Text {
+                                        id: guom_left_text
+                                        text: "FPT"
+                                        color: "black"
+                                        anchors.verticalCenter: parent.verticalCenter
+                                        anchors.horizontalCenter: parent.horizontalCenter
+                                        font.bold: true
+                                        font.pixelSize: 35
+                                        font.family: font_for_km.name
+                                    }
                                 }
                             }
                         }
@@ -457,6 +468,17 @@ Item {
                                             // Fill the triangle
                                             ctx.fill();
                                         }
+                                    }
+
+                                    Text {
+                                        id: guom_right_text
+                                        text: "VECTOR"
+                                        color: "black"
+                                        anchors.verticalCenter: parent.verticalCenter
+                                        anchors.horizontalCenter: parent.horizontalCenter
+                                        font.bold: true
+                                        font.pixelSize: 20
+                                        font.family: font_for_km.name
                                     }
                                 }
                             }

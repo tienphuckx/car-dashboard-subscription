@@ -49,10 +49,10 @@ Item {
                 top: id_info.top
                 topMargin: id_info.height * 0.07
             }
-            color: "red"
+            color: "light green"
             font.pixelSize: id_info.height * 0.07
             font.family: font_for_day_time.name
-            text: getCurrentDate()  // Call the updated function
+            text: getCurrentDate()
         }
 
 
@@ -64,7 +64,7 @@ Item {
                 top: id_date.bottom
                 topMargin: id_info.height * 0.01
             }
-            color: "#00ffff"
+            color: "light green"
             font.pixelSize: id_info.height * 0.1
             font.family: font_for_day_time.name
             text: carData.currentTime
