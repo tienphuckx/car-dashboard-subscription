@@ -3,5 +3,8 @@
         <file>sound/run.wav</file>
         <file>sound/start.wav</file>
         <file>fi_bg.mp4</file>
+        <file>noisy_car.mp3</file>
+        <file>guitar_sound.mp3</file>
+        <file>noisy_car_sound.wav</file>
     </qresource>
 </RCC>

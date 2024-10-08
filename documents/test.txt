@@ -1,0 +1,4 @@
+C:\Qt\6.5.3\msvc2019_64\bin\
+https://www.youtube.com/watch?v=8EUjXQzFfoA
+
+C:\Qt\6.5.3\msvc2019_64\bin\qmltestrunner.exe -input tst_Info.qml

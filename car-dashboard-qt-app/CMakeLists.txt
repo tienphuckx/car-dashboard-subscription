@@ -34,6 +34,7 @@ qt_add_qml_module(appcar-dashboard-subscription
         CarData.h
         CarData.cpp
         RESOURCES rc.qrc
+        QML_FILES tst_Info.qml
 )
 
 # Separate Unit Test Target

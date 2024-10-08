@@ -22,7 +22,7 @@ Window {
 
     SoundEffect {
         id: sound_run
-        source: "qrc:/img/sound/run.wav"
+        source: "qrc:/img/noisy_car_sound.wav"
         volume: 1
         loops: 1
     }

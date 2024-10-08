@@ -169,8 +169,8 @@ void loop() {
     }
 
     printLog(humidity, temperatureC, speed, fuel, gear, gps);
-    displayData(humidity, temperatureC, speed, fuel, gear, gps);
-    sendDataToAPI(temperatureC, humidity, speed, fuel, gear, gps);
+    displayData(humidity, temperatureC, speed, fuel, gear, gps); // for LCD OLED
+    sendDataToAPI(temperatureC, humidity, speed, fuel, gear, gps); // send data to server
 
   } else {
     Serial.println("ERROR: WiFi not connected. Attempting to reconnect...");
