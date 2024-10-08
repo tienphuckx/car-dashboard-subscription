@@ -9,11 +9,11 @@ Item {
     // Speed area
     Rectangle {
         id: id_speedArea
-
         anchors {
             horizontalCenter: parent.horizontalCenter
+            verticalCenter: parent.verticalCenter // This centers the rectangle vertically
         }
-        width: parent.width * 0.4
+        width: parent.width * 0.36
         height: width
         color: "black"
         radius: width/2
@@ -71,7 +71,6 @@ Item {
     }
 
 
-    // ???
     Rectangle {
         anchors {
             bottom: id_speedArea.bottom

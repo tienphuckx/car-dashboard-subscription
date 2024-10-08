@@ -166,7 +166,9 @@ Item {
             bottom: id_speed.bottom
             horizontalCenter: parent.horizontalCenter
         }
-        value: carData.speedValue
+        // value: carData.speedValue
+        value: (carData && carData.speedValue !== null && carData.speedValue !== undefined) ? carData.speedValue : 0
+
         startAngle: id_speed.startAngle
         angleLength: id_speed.angleLength / (id_speed.maxSpeed / (id_speed.numberIndexs - 1))
     }
@@ -194,7 +196,8 @@ Item {
 
         Text {
             font.family: font_for_temp.name
-            text: carData.temperatureValue
+            // text: carData.temperatureValue
+            text: carData && carData.temperatureValue !== null ? carData.temperatureValue : 0
             font.pixelSize: 33
             anchors.centerIn: parent
             anchors.verticalCenterOffset: 8
@@ -268,6 +271,9 @@ Item {
                             anchors.horizontalCenterOffset: 9
                             color: "light green"
 
+                            rotation: -27
+                            transformOrigin: Item.Center
+
                             Rectangle {
                                 id: thanh_bao_ve
                                 width: 10
@@ -310,16 +316,16 @@ Item {
                                         }
                                     }
 
-                                    Text {
-                                        id: guom_left_text
-                                        text: "FPT"
-                                        color: "black"
-                                        anchors.verticalCenter: parent.verticalCenter
-                                        anchors.horizontalCenter: parent.horizontalCenter
-                                        font.bold: true
-                                        font.pixelSize: 35
-                                        font.family: font_for_km.name
-                                    }
+                                    // Text {
+                                    //     id: guom_left_text
+                                    //     text: "FPT"
+                                    //     color: "black"
+                                    //     anchors.verticalCenter: parent.verticalCenter
+                                    //     anchors.horizontalCenter: parent.horizontalCenter
+                                    //     font.bold: true
+                                    //     font.pixelSize: 35
+                                    //     font.family: font_for_km.name
+                                    // }
                                 }
                             }
                         }
@@ -352,7 +358,8 @@ Item {
 
         Text {
             font.family: font_for_humidity.name
-            text: carData.humidity
+            // text: carData.humidity
+            text: carData && carData.humidity !== null ? carData.humidity : 0
             font.pixelSize: 33
             anchors.centerIn: parent
             anchors.verticalCenterOffset: 8
@@ -428,6 +435,9 @@ Item {
                             anchors.horizontalCenterOffset: -9
                             color: "light green"
 
+                            rotation: 27
+                            transformOrigin: Item.Center
+
                             Rectangle {
                                 id: thanh_bao_ve_right
                                 width: 10
@@ -470,16 +480,16 @@ Item {
                                         }
                                     }
 
-                                    Text {
-                                        id: guom_right_text
-                                        text: "VECTOR"
-                                        color: "black"
-                                        anchors.verticalCenter: parent.verticalCenter
-                                        anchors.horizontalCenter: parent.horizontalCenter
-                                        font.bold: true
-                                        font.pixelSize: 20
-                                        font.family: font_for_km.name
-                                    }
+                                    // Text {
+                                    //     id: guom_right_text
+                                    //     text: "VECTOR"
+                                    //     color: "black"
+                                    //     anchors.verticalCenter: parent.verticalCenter
+                                    //     anchors.horizontalCenter: parent.horizontalCenter
+                                    //     font.bold: true
+                                    //     font.pixelSize: 20
+                                    //     font.family: font_for_km.name
+                                    // }
                                 }
                             }
                         }
@@ -508,7 +518,8 @@ Item {
         Text {
             id: gps_value
             font.family: font_for_humidity.name
-            text: carData.gps
+            // text: carData.gps
+            text: carData && carData.gps !== null ? carData.gps : "0"
             font.pixelSize: 23
             anchors.centerIn: parent
             anchors.verticalCenterOffset: 38 // center --> offset to change possition

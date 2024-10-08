@@ -103,7 +103,8 @@ Item {
             bottom: id_fuel.bottom
             horizontalCenter: parent.horizontalCenter
         }
-        value: carData.fuelValue
+        // value: carData.fuelValue
+        value: carData && carData.fuelValue !== null ? carData.fuelValue : 0
         startAngle: 270
         angleLength: 45
     }

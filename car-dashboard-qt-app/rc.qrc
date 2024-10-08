@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>sound/run.wav</file>
+        <file>sound/start.wav</file>
+        <file>fi_bg.mp4</file>
+    </qresource>
+</RCC>

@@ -7,7 +7,7 @@ set(CMAKE_AUTOMOC ON)  # Automatically run moc for files with Q_OBJECT
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-find_package(Qt6 6.5 REQUIRED COMPONENTS Quick Network)
+find_package(Qt6 6.5 REQUIRED COMPONENTS Quick Network Multimedia)
 # find_package(Qt6 6.5 REQUIRED COMPONENTS Quick Test Network)
 
 # Main application
@@ -29,9 +29,11 @@ qt_add_qml_module(appcar-dashboard-subscription
         Info.qml
         Speed.qml
         SpeedNeedle.qml
+        Turn.qml
     SOURCES
         CarData.h
         CarData.cpp
+        RESOURCES rc.qrc
 )
 
 # Separate Unit Test Target
@@ -52,7 +54,7 @@ set_target_properties(appcar-dashboard-subscription PROPERTIES
 
 # Link Qt modules for the main application
 target_link_libraries(appcar-dashboard-subscription
-    PRIVATE Qt6::Quick Qt6::Network
+    PRIVATE Qt6::Quick Qt6::Network Qt6::Multimedia
 )
 
 # Install Targets

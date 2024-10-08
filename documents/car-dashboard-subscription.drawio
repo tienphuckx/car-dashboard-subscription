@@ -1,0 +1,56 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="24.7.17">
+  <diagram name="Page-1" id="c7_XQBHlsvL_Uz2ckypy">
+    <mxGraphModel dx="1275" dy="1936" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="UAWbXfBEup-myfQaXgJg-33" value="" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.cloud_rect" vertex="1" parent="1">
+          <mxGeometry x="240" y="-920" width="340" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="UAWbXfBEup-myfQaXgJg-21" value="" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/computer_and_terminals/Personal_Computer_with_Server.svg;" vertex="1" parent="1">
+          <mxGeometry x="280" y="-900" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="UAWbXfBEup-myfQaXgJg-36" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.mysql_db_instance;fillColor=#2E73B8;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="440" y="-900" width="90" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="UAWbXfBEup-myfQaXgJg-39" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#434445;aspect=fixed;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.vvd.cpu;" vertex="1" parent="1">
+          <mxGeometry x="10" y="-640" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="UAWbXfBEup-myfQaXgJg-45" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=quota" vertex="1" parent="1">
+          <mxGeometry x="660" y="-650" width="145.84" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="UAWbXfBEup-myfQaXgJg-56" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.02;entryY=1.019;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.847;exitY=0.269;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="UAWbXfBEup-myfQaXgJg-39" target="UAWbXfBEup-myfQaXgJg-33">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="120" y="-640" as="sourcePoint" />
+            <mxPoint x="150" y="-680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UAWbXfBEup-myfQaXgJg-57" value="" style="shape=message;html=1;outlineConnect=0;" vertex="1" parent="UAWbXfBEup-myfQaXgJg-56">
+          <mxGeometry width="20" height="14" relative="1" as="geometry">
+            <mxPoint x="-10" y="-7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UAWbXfBEup-myfQaXgJg-58" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.002;exitY=0.987;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="UAWbXfBEup-myfQaXgJg-33" target="UAWbXfBEup-myfQaXgJg-45">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="570" y="-890" as="sourcePoint" />
+            <mxPoint x="670" y="-890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UAWbXfBEup-myfQaXgJg-59" value="" style="shape=message;html=1;outlineConnect=0;" vertex="1" parent="UAWbXfBEup-myfQaXgJg-58">
+          <mxGeometry width="20" height="14" relative="1" as="geometry">
+            <mxPoint x="-10" y="-7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UAWbXfBEup-myfQaXgJg-64" value="Qt Car Dashboard" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="590" y="-500" width="260" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UAWbXfBEup-myfQaXgJg-66" value="ESP32" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="20" y="-500" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UAWbXfBEup-myfQaXgJg-67" value="Cloud Server" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="270" y="-780" width="260" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
