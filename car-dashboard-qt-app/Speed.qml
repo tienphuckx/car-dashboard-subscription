@@ -251,6 +251,39 @@ Item {
                     rotation: 17
                     transformOrigin: Item.Top | Item.HorizontalCenter
 
+                    /** start for animation */
+                    // function animateRotation_arm() {
+                    //     rotationAnimation_arm_down_left.running = true;
+                    // }
+                    // SequentialAnimation {
+                    //     id: rotationAnimation_arm_down_left
+                    //     loops: Animation.Infinite // Loop infinitely
+                    //     running: false // Start only when animateRotation() is called
+
+                    //     NumberAnimation {
+                    //         target: arm_down_left
+                    //         property: "rotation"
+                    //         from: 17
+                    //         to: 27
+                    //         duration: 1000 // 1 second for the first phase
+                    //         easing.type: Easing.InOutSine // Smooth easing
+                    //     }
+
+                    //     NumberAnimation {
+                    //         target: arm_down_left
+                    //         property: "rotation"
+                    //         from: 27
+                    //         to: 17
+                    //         duration: 1000 // 1 second for the return phase
+                    //         easing.type: Easing.InOutSine // Smooth easing
+                    //     }
+                    // }
+                    // Component.onCompleted: {
+                    //     arm_down_left.animateRotation_arm();
+                    // }
+                    /** end for animation */
+
+
                     Rectangle {
                         id: ban_tay_left
                         width: parent.width * 4
@@ -261,6 +294,8 @@ Item {
                         anchors.top: parent.bottom
                         anchors.topMargin: -5
 
+
+
                         Rectangle {
                             id: hilt
                             width: parent.width * 2.5
@@ -269,10 +304,47 @@ Item {
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.topMargin: -15
                             anchors.horizontalCenterOffset: 9
-                            color: "light green"
+                            // color: "light green"
+                            color: "black"
+                            z: -2
 
-                            rotation: -27
+                            rotation: -17
                             transformOrigin: Item.Center
+
+
+
+                            /** start for animation */
+                            function animateRotation() {
+                                rotationAnimation.running = true;
+                            }
+
+                            SequentialAnimation {
+                                id: rotationAnimation
+                                loops: Animation.Infinite // Loop infinitely
+                                running: false // Start only when animateRotation() is called
+
+                                NumberAnimation {
+                                    target: hilt
+                                    property: "rotation"
+                                    from: -17
+                                    to: -47
+                                    duration: 1000 // 1 second for the first phase
+                                    easing.type: Easing.InOutSine // Smooth easing
+                                }
+
+                                NumberAnimation {
+                                    target: hilt
+                                    property: "rotation"
+                                    from: -47
+                                    to: -17
+                                    duration: 1000 // 1 second for the return phase
+                                    easing.type: Easing.InOutSine // Smooth easing
+                                }
+                            }
+                            Component.onCompleted: {
+                                hilt.animateRotation();
+                            }
+                            /** end animation **/
 
                             Rectangle {
                                 id: thanh_bao_ve
@@ -280,7 +352,10 @@ Item {
                                 height: 50
                                 anchors.right: parent.left  // Attach the right side of this rectangle to the left of the parent
                                 anchors.verticalCenter: parent.verticalCenter  // Align vertically to the parent's center
-                                color: "light green"
+                                // color: "light green"
+                                color: "black"
+
+
 
                                 Rectangle {
                                     id: guom
@@ -288,21 +363,17 @@ Item {
                                     height: 40
                                     anchors.right: parent.left  // Attach the right side of this rectangle to the left of the parent
                                     anchors.verticalCenter: parent.verticalCenter  // Align vertically to the parent's center
-                                    color: "light green"
-
+                                    color: "black"
                                     Canvas {
                                         id: arrow
                                         width: parent.height
                                         height: parent.height
                                         anchors.right: parent.left  // Attach the right side of this rectangle to the left of the parent
                                         anchors.verticalCenter: parent.verticalCenter // Fill the entire guom rectangle
-
                                         onPaint: {
                                             var ctx = getContext("2d");
                                             ctx.clearRect(0, 0, width, height); // Clear the canvas
-
-                                            // Set triangle color
-                                            ctx.fillStyle = "light green";
+                                            ctx.fillStyle = "black";
 
                                             // Start drawing a triangle with the top vertex on the left
                                             ctx.beginPath();
@@ -315,17 +386,6 @@ Item {
                                             ctx.fill();
                                         }
                                     }
-
-                                    // Text {
-                                    //     id: guom_left_text
-                                    //     text: "FPT"
-                                    //     color: "black"
-                                    //     anchors.verticalCenter: parent.verticalCenter
-                                    //     anchors.horizontalCenter: parent.horizontalCenter
-                                    //     font.bold: true
-                                    //     font.pixelSize: 35
-                                    //     font.family: font_for_km.name
-                                    // }
                                 }
                             }
                         }
@@ -433,10 +493,46 @@ Item {
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.topMargin: -15
                             anchors.horizontalCenterOffset: -9
-                            color: "light green"
+                            // color: "light green"
+                            color: "red"
+                            z:-2
 
                             rotation: 27
                             transformOrigin: Item.Center
+
+
+                            /** start for animation */
+                            function animateRotation_arm_right() {
+                                rotationAnimation_arm_down_right.running = true;
+                            }
+
+                            SequentialAnimation {
+                                id: rotationAnimation_arm_down_right
+                                loops: Animation.Infinite // Loop infinitely
+                                running: false // Start only when animateRotation() is called
+
+                                NumberAnimation {
+                                    target: hilt_right
+                                    property: "rotation"
+                                    from: 17
+                                    to: 47
+                                    duration: 1000 // 1 second for the first phase
+                                    easing.type: Easing.InOutSine // Smooth easing
+                                }
+
+                                NumberAnimation {
+                                    target: hilt_right
+                                    property: "rotation"
+                                    from: 47
+                                    to: 17
+                                    duration: 1000 // 1 second for the return phase
+                                    easing.type: Easing.InOutSine // Smooth easing
+                                }
+                            }
+                            Component.onCompleted: {
+                                hilt_right.animateRotation_arm_right();
+                            }
+                            /** end for animation */
 
                             Rectangle {
                                 id: thanh_bao_ve_right
@@ -444,7 +540,8 @@ Item {
                                 height: 50
                                 anchors.left: parent.right  // Attach the right side of this rectangle to the left of the parent
                                 anchors.verticalCenter: parent.verticalCenter  // Align vertically to the parent's center
-                                color: "light green"
+                                // color: "light green"
+                                color: "red"
 
                                 Rectangle {
                                     id: guom_right
@@ -452,7 +549,8 @@ Item {
                                     height: 40
                                     anchors.left: parent.right  // Attach the right side of this rectangle to the left of the parent
                                     anchors.verticalCenter: parent.verticalCenter  // Align vertically to the parent's center
-                                    color: "light green"
+                                    // color: "light green"
+                                    color: "red"
 
                                     Canvas {
                                         id: arrow_right
@@ -466,7 +564,8 @@ Item {
                                             ctx.clearRect(0, 0, width, height); // Clear the canvas
 
                                             // Set triangle color
-                                            ctx.fillStyle = "light green";
+                                            // ctx.fillStyle = "light green";
+                                            ctx.fillStyle = "red";
 
                                             // Start drawing a triangle with the top vertex on the left
                                             ctx.beginPath();
@@ -479,17 +578,6 @@ Item {
                                             ctx.fill();
                                         }
                                     }
-
-                                    // Text {
-                                    //     id: guom_right_text
-                                    //     text: "VECTOR"
-                                    //     color: "black"
-                                    //     anchors.verticalCenter: parent.verticalCenter
-                                    //     anchors.horizontalCenter: parent.horizontalCenter
-                                    //     font.bold: true
-                                    //     font.pixelSize: 20
-                                    //     font.family: font_for_km.name
-                                    // }
                                 }
                             }
                         }
