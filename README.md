@@ -6,13 +6,13 @@ A realtime car's dashboard using ESP32, DHT11 (UART), Qt, QML, Firebase, ...
 
 [![Watch the video](https://github.com/tienphuckx/car-dashboard-subscription/blob/master/imgs/yt.PNG)](https://www.youtube.com/watch?v=6W-x30GdH8g)
 
-# Bee
+# Final Car Dashboard (A bee robot by QML)
 <img src="https://github.com/tienphuckx/car-dashboard-subscription/blob/master/imgs/dashboard.jpg" />
 
 # Overview
 <img src="https://github.com/tienphuckx/car-dashboard-subscription/blob/master/imgs/car-dashboard.jpg" />
 
-# led
+# OLED
 <img src="https://github.com/tienphuckx/car-dashboard-subscription/blob/master/imgs/led.jpg" />
 
 # ESP32 Devkit
