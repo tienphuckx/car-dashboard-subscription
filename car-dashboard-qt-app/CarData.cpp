@@ -24,7 +24,7 @@ CarData::CarData(QObject *parent)
     // Fetch data from API every 5 seconds
     QTimer *apiTimer = new QTimer(this);
     connect(apiTimer, &QTimer::timeout, this, &CarData::fetchDataFromAPI);
-    apiTimer->start(5000); // Fetch API data every 5 seconds
+    apiTimer->start(2000); // Fetch API data every 5 seconds
 
     //connect each second will update time
     connect(m_timer, &QTimer::timeout, this, &CarData::updateTime);

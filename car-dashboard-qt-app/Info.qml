@@ -16,7 +16,6 @@ Item {
         return month + " " + day + " " + year;
     }
 
-
     Timer {
         id: timer
         repeat: true
@@ -54,7 +53,6 @@ Item {
             font.family: font_for_day_time.name
             text: getCurrentDate()
         }
-
 
         // display current time
         Text {

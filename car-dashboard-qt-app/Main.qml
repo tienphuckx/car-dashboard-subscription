@@ -43,17 +43,11 @@ Window {
     Dashboard {
         width: 720
         height: 470
-
-
         anchors {
-            // horizontalCenter: parent.horizontalCenter
-            // verticalCenter: parent.verticalCenter
             left: parent.left
             top: parent.top
             topMargin: 210
-            // rightMargin: 200
         }
-
         Component.onCompleted: {
             sound_start.play();
         }
